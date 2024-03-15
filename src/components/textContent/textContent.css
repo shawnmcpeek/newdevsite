@@ -1,0 +1,32 @@
+.text-content {
+  display: flex;
+  justify-content: space-between; /* Distribute items along the main axis */
+  text-align: center; /* Center align content within the container */
+}
+
+.left-column {
+  flex: 1; /* Take up available space */
+  padding-right: 20px; /* Adjust spacing between columns */
+  text-align: left; /* Align text to the left */
+}
+
+.right-column {
+  flex: 1; /* Take up available space */
+}
+
+.a {
+  text-align: center; /* Center-align the list */
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.a li {
+  text-align: left; /* Left-align the text within each list item */
+  margin-bottom: 10px;
+  font-size: 1.0rem;
+}
+
+.a .double-indented {
+  text-indent: 10px; /* Adjust the value as needed */
+  margin-left: 20px; /* Adjust the value as needed */
+}
