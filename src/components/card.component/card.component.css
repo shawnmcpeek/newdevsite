@@ -1,41 +1,37 @@
 .web-dev-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    transform: translateZ(0);
-    transition: transform 0.25s ease-out;
-    width: calc (33%-15px);
-  }
-  
-  .custom-card {
-    width: calc (33%-15px);
-    min-width: 10rem;
-    max-width: 18rem;
-    margin-bottom: 1.4rem;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px red;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-  
-  .expanded {
-    width: calc(90vw - 40px); /* Adjust as needed */
-    max-width: none;
-  }
-  
-  .expanded-content {
-    margin-top: 20px;
-    color: white;
-  }
-  
-  .expanded-content p {
-    margin-bottom: 10px;
-  }
-  
-  .expanded-content a {
-    color: blue;
-  }
-  
+  grid-auto-columns: 30%;
+  flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
+  justify-content: space-between; /* Distribute cards evenly */
+}
+
+.custom-card {
+  grid-auto-columns: 30%;
+  /*min-width: 160px; /* Example using pixels */
+  /*max-width: 288px; /* Example using pixels */
+  margin-bottom: 1.4rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px red;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.expanded {
+  width: calc(90vw - 40px); /* Adjust as needed */
+  max-width: none;
+}
+
+.expanded-content {
+  margin-top: 20px;
+  color: white;
+}
+
+.expanded-content p {
+  margin-bottom: 10px;
+}
+
+.expanded-content a {
+  color: blue;
+}
