@@ -9,6 +9,7 @@
   
   .custom-card {
     width: calc (33%-15px);
+    min-width: 10rem;
     max-width: 18rem;
     margin-bottom: 1.4rem;
     padding: 1.5rem;
