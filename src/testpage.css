@@ -1,0 +1,227 @@
+/* App.css */
+
+/* Center the content horizontally */
+.App {
+    text-align: center;
+    margin: 1rem; /* Add margin around the entire app */
+  }
+  
+  body {
+    background: rgb(0,0,0); /* Fallback color */
+    background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ff0000",GradientType=1);
+  }
+  
+  .flex-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  /* Style for the logo */
+  .App-logo {
+    height: 25vmin; /* Set the height of the logo */
+    pointer-events: none; /* Ensure the logo doesn't receive pointer events */
+  }
+  
+  /* Animation for the logo spin */
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear; /* Apply spinning animation */
+    }
+  }
+  
+  /* Styling for the header */
+  .App-header {
+    min-height: 100vh; /* Ensure the header fills the entire viewport */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    font-size: calc(10px + 2vmin); /* Set font size */
+    color: white; /* Set text color */
+  }
+  
+  /* Styling for links */
+  .App-link {
+    color: #61dafb; /* Set link color */
+  }
+  
+  /* Define keyframes for logo spin animation */
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg); /* Start from 0 degrees rotation */
+    }
+    to {
+      transform: rotate(360deg); /* End at 360 degrees rotation (one full circle) */
+    }
+  }
+  
+  /* Define font face for Manuscript font */
+  @font-face {
+    font-family: 'Manuscript'; /* Specify font family name */
+    src: url('../public/WornManuscriptrough-2E1d.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Define font face for Galdeano font */
+  @font-face {
+    font-family: 'Galdeano'; /* Specify font family name */
+    src: url('../public/Galdeano-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  /* Apply Manuscript font to h1 elements with increased letter spacing */
+  h1 {
+    font-family: 'Manuscript', sans-serif !important;
+    letter-spacing: 0.2em !important;
+  }
+  
+  
+  /* Define new gradient background */
+  .gradient-background {
+    /* Gradient background */
+    background: rgb(0,0,0); /* Fallback color */
+    background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ff0000",GradientType=1);
+    
+    /* Ensure the gradient fills the entire viewport */
+    min-height: 100vh;
+  }
+  
+  
+  p, li {
+    font-family: 'Galdeano', sans-serif; /* Use Galdeano font family */
+    font-size: 1.25rem;}
+  
+  div1 {
+    font-family: 'Galdeano', sans-serif; /* Use Galdeano font family */
+    font-size: .75rem;
+  }
+
+  :root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #D7BDCA;  
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    

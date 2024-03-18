@@ -100,3 +100,8 @@ h1 {
 p, li {
   font-family: 'Galdeano', sans-serif; /* Use Galdeano font family */
   font-size: 1.25rem;}
+
+div1 {
+  font-family: 'Galdeano', sans-serif; /* Use Galdeano font family */
+  font-size: .75rem;
+}
