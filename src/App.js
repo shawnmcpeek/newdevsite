@@ -29,7 +29,8 @@ function App() {
               <Route path="/contact" element={<ContactComponent />} />{" "}
               {/* Add Route for ContactComponent */}
             </Routes>
-            <div1>© Shawn McPeek 2024</div1>
+            <br />
+            <div className="copyright">© Shawn McPeek 2024</div>
           </header>
         </div>
       </div>

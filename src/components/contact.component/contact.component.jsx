@@ -53,11 +53,7 @@ function ContactForm() {
             ></textarea>
           </div>
           <input type="hidden" name="+captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://shawnmcpeek.com/thanks.html"
-          />
+          <input type="hidden" name="_next" value="./thanks.jsx" />
           <button type="submit">Submit</button>
         </form>
       </div>
