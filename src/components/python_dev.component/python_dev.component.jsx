@@ -13,20 +13,26 @@ const PythonDevComponent = () => {
     setSelectedProject(null);
   };
 
-  const runScript = (script) => {
-    // Execute the script using Brython
-    window.BrythonRunner.runScript(script);
-  };
-
   useEffect(() => {
     if (selectedProject) {
+      if (window.__BRYTHON__) {
+        window.BrythonRunner = {
+          runScript: (script) => {
+            console.log("run script", script);
+            window.__BRYTHON__.run_script(script); // Execute the script using Brython
+          },
+        };
+        return;
+      }
+
       const scriptElement = document.createElement("script");
       scriptElement.src =
         "https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"; // Brython CDN URL
       scriptElement.onload = () => {
         window.BrythonRunner = {
           runScript: (script) => {
-            window.__BRYTHON__.run_script(script);
+            console.log("run script", script);
+            window.__BRYTHON__.run_script(script); // Execute the script using Brython
           },
         };
       };
@@ -53,7 +59,11 @@ const PythonDevComponent = () => {
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
           <div id="output"></div>
-          <button onClick={() => runScript(selectedProject.script)}>
+          <button
+            onClick={() =>
+              window.BrythonRunner.runScript(selectedProject.script)
+            }
+          >
             Run Script
           </button>
           <button onClick={handleClosePopup}>Close</button>

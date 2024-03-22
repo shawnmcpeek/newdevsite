@@ -59,7 +59,7 @@
   .popup button {
     margin-top: 20px;
     margin-right: 10px;
-    background-color:red;
+    background-color: rgba(255, 0, 0, .8);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -69,6 +69,8 @@
   }
   
   .popup button:hover {
-    background-color: grey;
-  }
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
   
