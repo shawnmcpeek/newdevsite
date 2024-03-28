@@ -9,7 +9,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-
 .nav-pills .nav-link.active {
   /* Styles for active link */
   background-color: #950740; /* Blue background for active link */
@@ -19,9 +18,9 @@
 
 .nav-pills .nav-link:hover {
   /* Styles for hover effect */
-  background-color: #e5e5e5; /* Change background color on hover */
-  color: #333; /* Change text color on hover */
-  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 5px #950740, 0 0 25px #950740, 0 0 50px #950740, 0 0 100px #950740, 0 0 200px #950740; /* Copying box-shadow effect */
+  background-color: black; /* Change background color on hover */
+  border-radius: 15px;
 }
 
 .nav-pills .nav-link:after {

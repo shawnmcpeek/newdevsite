@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brython Interactive Console</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Brython Interactive Console" />
+    <meta name="keywords" content="Python, Brython" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      .codearea {
+        background-color: #000;
+        color: #fff;
+        font-family: "Oxygen Mono", Consolas, "Liberation Mono",
+          "DejaVu Sans Mono", monospace;
+        font-size: 14px;
+        overflow: auto;
+        width: 120ch;
+        height: 55ch;
+        margin-left: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Please enable Javascript to view this page correctly</noscript>
+    <div id="banner_row">
+      <span class="logo"><a href="/index.html">brython</a></span>
+    </div>
+    <div id="code" class="codearea" contenteditable></div>
+    <div id="content"></div>
+    <!-- Include Brython library from CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython_stdlib.js"
+    ></script>
+    <script type="text/python3">
+      from browser import document, console
+      from interpreter import Interpreter
+
+      # Function to load and execute Python file
+      def load_and_execute_file(filename):
+          try:
+              with open(filename, 'r') as file:
+                  python_code = file.read()
+              exec(python_code, globals(), locals())
+          except Exception as e:
+              console.log('Error loading and executing file:', e)
+
+      # Start an interactive interpreter in textarea with id "code"
+      document["code"].text = ""  # Clear the initial content
+      Interpreter("code")
+
+      # Load and execute the Python file when the page loads
+      load_and_execute_file('quizgame.py')  # Replace 'quizgame.py' with the actual filename
+    </script>
+  </body>
+</html>

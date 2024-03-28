@@ -15,26 +15,10 @@ const PythonDevComponent = () => {
 
   useEffect(() => {
     if (selectedProject) {
-      if (window.__BRYTHON__) {
-        window.BrythonRunner = {
-          runScript: (script) => {
-            console.log("run script", script);
-            window.__BRYTHON__.run_script(script); // Execute the script using Brython
-          },
-        };
-        return;
-      }
-
       const scriptElement = document.createElement("script");
-      scriptElement.src =
-        "https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"; // Brython CDN URL
+      scriptElement.src = selectedProject.script; // Use the script URL directly
       scriptElement.onload = () => {
-        window.BrythonRunner = {
-          runScript: (script) => {
-            console.log("run script", script);
-            window.__BRYTHON__.run_script(script); // Execute the script using Brython
-          },
-        };
+        // You might need additional setup here depending on your Pyscript setup
       };
       document.body.appendChild(scriptElement);
     }
@@ -59,13 +43,7 @@ const PythonDevComponent = () => {
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
           <div id="output"></div>
-          <button
-            onClick={() =>
-              window.BrythonRunner.runScript(selectedProject.script)
-            }
-          >
-            Run Script
-          </button>
+          {/* No need for BrythonRunner, just execute the script directly */}
           <button onClick={handleClosePopup}>Close</button>
         </div>
       )}

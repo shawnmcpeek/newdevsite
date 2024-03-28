@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython_stdlib.js"
+    ></script>
+  </head>
+
+  <body>
+    <button id="runButton">Run Script</button>
+
+    <div id="output"></div>
+
+    <script type="text/python">
+      from browser import document
+
+      def run_script(event):
+          print("Welcome to my Disney Quiz!")
+
+          playing=input("Do you want to play a game? yes or no. ")
+
+          if playing != "yes":
+              quit()
+
+          print("Okay! Let's play!")
+          print("Make sure to capitalize correctly!")
+          score = 0
+
+          answer = input("What year did Steamboat Willy come out? ")
+          if answer == "1928":
+              print("Correct!")
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("Who was Mickey's original big rival? ")
+          if answer in ["Mortimer", "Mortimer Mouse", "Pete", "Pete the Cat"]:
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("What is the name of the temple on the Indy ride? ")
+          if answer in ["Temple of the Forbidden Eye", "The Temple of the Forbidden Eye"]:
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("Should you pet the skulls while in line on the Indy ride? ")
+          if answer.lower() == "yes":
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("How many ghosts live in the Haunted Mansion? ")
+          if answer == "999":
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("What is the 'Wildest Ride in the Wilderness'? ")
+          if answer in ["Big Thunder Mountain", "Big Thunder Mountain Railroad"]:
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          answer = input("What creature stole Dad's wallet? ")
+          if answer in ["Abominable Snowman", "Yeti"]:
+              print('Correct!')
+              score += 1
+          else:
+              print("Incorrect!")
+
+          print("You got " +str(score) + " questions correct!")
+          print("You got " +str((score/7)*100) + "% correct!")
+
+          input('Press ENTER to exit')
+
+      document["runButton"].bind("click", run_script)
+    </script>
+  </body>
+</html>

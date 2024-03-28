@@ -6,6 +6,7 @@ import Pills from "./components/nav_bar/nav_bar.components";
 import TextContent from "./components/textContent/textContent";
 import WebDevComponent from "./components/web_dev.component/web_dev.component";
 import PythonDevComponent from "./components/python_dev.component/python_dev.component";
+
 /**
  * Renders the main application component, including routing and component composition.
  *

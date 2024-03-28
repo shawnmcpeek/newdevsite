@@ -1,76 +1,76 @@
 .python-dev-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .project-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjusted to fixed number of columns */
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
-  }
-  
-  
-  .project-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid black;
-  box-shadow: 0px 0px 10px red;
-    padding: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .project-card h3 {
-    margin-top: 0;
-  }
-  
-  .project-card p {
-    margin-bottom: 0;
-  }
-  
-  .project-card.selected {
-    background-color: rgba(255,0,0, 0.8);
-  }
-  
-  .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 1);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px red;
-  }
-  
-  .code-container {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 8px;
-  }
-  
-  .code-container pre {
-    margin: 0;
-  }
-  
-  .popup button {
-    margin-top: 20px;
-    margin-right: 10px;
-    background-color: rgba(255, 0, 0, .8);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .popup button:hover {
-    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px red;
-    background-color: rgba(255, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-  
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjusted to fixed number of columns */
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px red;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+.project-card.selected {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px red;
+}
+
+.code-container {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.code-container pre {
+  margin: 0;
+}
+
+.popup button {
+  margin-top: 20px;
+  margin-right: 10px;
+  color: #950740; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Adjust padding with rem units */
+  background-color: rgba(0, 0, 0, 0.8); /* Default background color */
+  border: 2px solid #950740; /* Default border */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup button:hover {
+  /* Styles for hover effect */
+  background-color: #950740; /* Change background color on hover */
+  color: #333; /* Change text color on hover */
+  box-shadow: 0 0 5px #950740, 0 0 25px #950740, 0 0 50px #950740, 0 0 100px #950740, 0 0 200px #950740; /* Apply hover box shadow */
+}
