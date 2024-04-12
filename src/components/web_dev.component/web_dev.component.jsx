@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardComponent from "../card.component/card.component"; // Assuming you have a CardComponent
+//import CardComponent from "../card.component/card.component"; // Assuming you have a CardComponent
 import projectData from "./projectdata"; // Importing project data from projectData.js
 import ztmProjectData from "./ztmprojectdata"; // Importing ZTM project data from ztmprojectdata.js
 import "./web_dev.component.scss";
