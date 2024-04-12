@@ -30,8 +30,8 @@ const projectData = [
     title: "What is your alignment?",
     description:
       "When my family and I were at Disney in 2023, my teenage son and I were joking around about which stall you use, and started joking about which one you choose is also your D&D alignment. Since I didn't really find anything like that existing, I created an interactive one.",
-    buttonUrl: "https://kofcannualsurvey.netlify.app/",
-    buttonText: "KofC Annual Survey",
+    buttonUrl: "https://shawnmcpeek.github.io/alignment/",
+    buttonText: "What is your alignment?",
   },
 ];
 
