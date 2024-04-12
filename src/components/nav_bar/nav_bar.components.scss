@@ -1,0 +1,47 @@
+$primary-color: #950740; // Blue background for active link
+$secondary-color: silver; // Text color
+
+.nav-pills .button {
+  color: $secondary-color; // Text color
+  text-decoration: none; // Remove underline
+  padding: 0.75rem; // Adjust padding with rem units
+  position: relative; // Ensure correct positioning of pseudo-element
+  overflow: hidden; // Ensure the ripple effect is contained within the link
+  font-size: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+  &.active {
+    background-color: $primary-color; // Blue background for active link
+    color: #fff; // White text color for active link
+    border-radius: 15px; // Rounded corners
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px $primary-color, 0 0 25px $primary-color, 0 0 50px $primary-color, 0 0 100px $primary-color, 0 0 200px $primary-color; // Copying box-shadow effect
+    background-color: black; // Change background color on hover
+    border-radius: 15px;
+  }
+
+  &:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.022); // Ripple color
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 50%; // Ensure circular ripple effect
+  }
+
+  &:active:after {
+    width: 200%; // Adjust the size of the ripple effect
+    height: 200%; // Adjust the size of the ripple effect
+    margin-left: -50%; // Center the ripple effect
+    margin-top: -50%; // Center the ripple effect
+    opacity: 1;
+    transition: 0s;
+  }
+}

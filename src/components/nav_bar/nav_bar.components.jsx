@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation from react-router-dom
-import "./nav_bar.components.css";
+import "./nav_bar.components.scss";
 
-function Pills() {
+function NavBar() {
   const [activeKey, setActiveKey] = useState("/");
   const location = useLocation();
 
@@ -14,25 +14,25 @@ function Pills() {
     <div className="nav-pills flex-container" role="tablist">
       <Link
         to="/" // Update the 'to' attribute to redirect to the index route ("/")
-        className={`nav-link ${activeKey === "/" ? "active" : ""}`}
+        className={`button ${activeKey === "/" ? "active" : ""}`}
       >
         Home
       </Link>
       <Link
         to="/webdev" // Link to the WebDevComponent
-        className={`nav-link ${activeKey === "/webdev" ? "active" : ""}`}
+        className={`button ${activeKey === "/webdev" ? "active" : ""}`}
       >
         Web Dev
       </Link>
       <Link
         to="/pythondev" // Update with the correct path for Python Dev component
-        className={`nav-link ${activeKey === "/pythondev" ? "active" : ""}`}
+        className={`button ${activeKey === "/pythondev" ? "active" : ""}`}
       >
         Python Dev
       </Link>
       <Link
         to="/contact" // Update with the correct path for the Contact component
-        className={`nav-link ${activeKey === "/contact" ? "active" : ""}`}
+        className={`button ${activeKey === "/contact" ? "active" : ""}`}
       >
         Contact
       </Link>
@@ -40,4 +40,4 @@ function Pills() {
   );
 }
 
-export default Pills;
+export default NavBar;

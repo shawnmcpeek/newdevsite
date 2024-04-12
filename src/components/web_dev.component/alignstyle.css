@@ -1,0 +1,157 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  height: 300px;
+
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+  height: auto;
+  width: auto;
+  background-image: url('tile-squares-texture_1194-1171.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.box-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  background-color: #007bff;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  box-sizing: border-box;
+}
+
+.oval {
+  width: 75%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 5px darkgray;
+}
+
+.stick-figure {
+  width: 60px;
+  height: 100px;
+  position: relative;
+}
+
+.head {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.torso {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.arm, .leg {
+  width: 10px;
+  background-color: black;
+  position: absolute;
+}
+
+.arm.left {
+  transform: rotate(45deg);
+  top: 25px;
+  left: -8px;
+  height: 40px;
+}
+
+.arm.right {
+  transform: rotate(-45deg);
+  top: 25px;
+  right: -8px;
+  height: 40px;
+}
+
+.leg.left {
+  top: 130px;
+  left: 15px;
+  height: 60px;
+}
+
+.leg.right {
+  top: 130px;
+  right: 15px;
+  height: 60px;
+}
+
+.stick-figure.npc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stick-figure.player {
+  position: absolute;
+  top: 500px;
+  left: 50%;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 15px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+}
+
+.puddle {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 400%);
+  border-radius: 50px;
+}
+
+#Chaotic_Good .rectangle {
+  background-color: #007bff;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  box-sizing: border-box;
+  height: 100%;
+  margin-bottom: 40px;
+}

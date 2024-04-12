@@ -5,7 +5,6 @@
 /* Ensure cards are displayed in a grid */
 .web-dev-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   justify-content: space-between; /* Distribute cards evenly */
 }

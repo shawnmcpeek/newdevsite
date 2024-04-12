@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./python_dev.component.css";
+import "./python_dev.component.scss";
 import projects from "./projectData";
 
 const PythonDevComponent = () => {
@@ -27,6 +27,7 @@ const PythonDevComponent = () => {
   return (
     <div className="python-dev-container">
       <h2>Python Projects</h2>
+      <h3>Coming soon! Working on the back end.</h3>
       <div className="project-list">
         {projects.map((project) => (
           <div

@@ -1,8 +1,8 @@
 print("Welcome to my Disney Quiz!")
 
-playing=input("Do you want to play a game? yes or no. ")
+playing = input("Do you want to play a game? yes or no. ")
 
-if playing != "yes":
+if playing.lower() != "yes":
     quit()
 
 print("Okay! Let's play!")
@@ -17,48 +17,48 @@ else:
     print("Incorrect!")
 
 answer = input("Who was Mickey's original big rival? ")
-if answer == "Mortimer" or "Mortimer Mouse" or "Pete" or "Pete the Cat":
-    print('Correct!')
+if answer.lower() in ["mortimer", "mortimer mouse", "pete", "pete the cat"]:
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
 answer = input("What is the name of the temple on the Indy ride? ")
-if answer == "Temple of the Forbidden Eye" or "The Temple of the Forbidden Eye":
-    print('Correct!')
+if answer.lower() in ["temple of the forbidden eye", "the temple of the forbidden eye"]:
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
 answer = input("Should you pet the skulls while in line on the Indy ride? ")
-if answer == "Yes" or "yes":
-    print('Correct!')
+if answer.lower() == "yes":
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
 answer = input("How many ghosts live in the Haunted Mansion? ")
 if answer == "999":
-    print('Correct!')
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
 answer = input("What is the 'Wildest Ride in the Wilderness'? ")
-if answer == "Big Thunder Mountain" or "Big Thunder Mountain Railroad":
-    print('Correct!')
+if answer.lower() in ["big thunder mountain", "big thunder mountain railroad"]:
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
 answer = input("What creature stole Dad's wallet? ")
-if answer == "Abominable Snowman" or "Yeti":
-    print('Correct!')
+if answer.lower() in ["abominable snowman", "yeti"]:
+    print("Correct!")
     score += 1
 else:
     print("Incorrect!")
 
-print("You got " +str(score) + " questions correct!")
-print("You got " +str((score/7)*100) + "% correct!")
+print("You got " + str(score) + " questions correct!")
+print("You got " + str((score / 7) * 100) + "% correct!")
 
-input('Press ENTER to exit')
+input("Press ENTER to exit")
