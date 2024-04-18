@@ -6,7 +6,7 @@ const projectData = [
     title: "Knights of Columbus Council 15857",
     description:
       "As a member of this local council of the Knights of Columbus, Shawn and others felt that a web presence would greatly improve the visibility and draw of the council and order. Shawn set himself to the task of creating and designing a website using HTML, CSS, and JavaScript for appeal and usage.",
-    buttonUrl: "https://github.com/smcpeek/python-learning",
+    buttonUrl: "https://shawnmcpeek.github.io/kofc/",
     buttonText: "Knights of Columbus Council 15857",
   },
   {
