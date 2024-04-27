@@ -35,13 +35,13 @@ body {
 
 /* Styling for the header */
 .App-header {
-  min-height: 100vh; /* Ensure the header fills the entire viewport */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  font-size: calc(10px + 2vmin); /* Set font size */
-  color: white; /* Set text color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 /* Styling for links */
@@ -75,12 +75,34 @@ body {
   font-style: normal;
 }
 
-
-/* Apply Manuscript font to h1 elements with increased letter spacing */
-h1 {
-  font-family: 'Manuscript', sans-serif !important;
-  letter-spacing: 0.2em !important;
+@font-face {
+  font-family: 'Faelorehn';
+  src: url('Faelorehn-xBo5.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Wakanda';
+  src: url('WakandaFanther-JRpp7.ttf') format('truetype');
+}
+
+/* Load custom Japanese font */
+@font-face {
+  font-family: 'JapanRich';
+  src: url('JapanRichRegular-vm7G9.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Nintypo';
+  src: url('Nintypo-rgwZx.otf') format('opentype'); /* Use 'opentype' for OTF fonts */
+}
+
+@font-face {
+  font-family: 'Futurama';
+  src: url('fr-fal1.ttf') format('truetype');
+}
+.changingText {
+  font-size: 84px; /* Initial font size */
+}
+
 
 
 /* Define new gradient background */
